@@ -1,0 +1,37 @@
+pandas
+numpy
+matplotlib
+scikit-learn
+yfinance
+pydantic
+python-dotenv
+requests
+jupyter
+notebook
+
+# LLM
+groq
+openai
+
+# Task 2
+transformers
+datasets
+accelerate
+peft
+trl
+bitsandbytes
+sentencepiece
+evaluate
+rouge-score
+bert-score
+
+# Task 3
+langchain
+langgraph
+langchain-community
+chromadb
+duckduckgo-search
+
+# Optional
+wandb
+streamlit
