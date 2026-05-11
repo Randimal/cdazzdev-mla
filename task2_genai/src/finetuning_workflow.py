@@ -46,7 +46,7 @@ DEFAULT_TRAINING_CONFIG: JSONDict = {
     "bnb_4bit_compute_dtype": "bfloat16",
     "bnb_4bit_use_double_quant": True,
     "seed": 42,
-    "max_new_tokens": 220,
+    "max_new_tokens": 128,
 }
 
 
