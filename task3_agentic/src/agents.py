@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 from groq import Groq
 from pydantic import BaseModel, Field, ValidationError, field_validator
 
-from src.prompts import (
+from task3_agentic.src.prompts import (
     PORTFOLIO_STRATEGIST_ROLE_PROMPT,
     QUANTITATIVE_ANALYST_ROLE_PROMPT,
     RISK_REVIEW_ROLE_PROMPT,
@@ -19,8 +19,8 @@ from src.prompts import (
     build_risk_review_prompt,
     build_sentiment_research_prompt,
 )
-from src.schemas import FinalReport
-from src.tracing import log_tool_call
+from task3_agentic.src.schemas import FinalReport
+from task3_agentic.src.tracing import log_tool_call
 
 
 load_dotenv()

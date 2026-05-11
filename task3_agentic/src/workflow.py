@@ -23,7 +23,7 @@ from src.agents import (
     SentimentResearchAgent,
     run_critique_loop,
 )
-from src.schemas import FinalReport
+from task3_agentic.src.schemas import FinalReport
 from src.tools import (
     calculate_volatility,
     get_news,
@@ -31,7 +31,7 @@ from src.tools import (
     llm_sentiment,
     web_search,
 )
-from src.tracing import log_tool_call
+from task3_agentic.src.tracing import log_tool_call
 
 
 JSONDict = Dict[str, Any]

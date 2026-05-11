@@ -12,14 +12,14 @@ from dotenv import load_dotenv
 from groq import Groq
 from pydantic import ValidationError
 
-from src.schemas import (
+from task3_agentic.src.schemas import (
     NewsItem,
     PriceDataSummary,
     SentimentResult,
     VolatilityResult,
 )
 
-from src.tracing import traced_tool
+from task3_agentic.src.tracing import traced_tool
 
 
 # Notebook users often store API keys in a local .env file. Loading it here
