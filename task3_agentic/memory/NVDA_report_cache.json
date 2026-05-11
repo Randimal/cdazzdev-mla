@@ -1,0 +1,774 @@
+{
+  "ticker": "NVDA",
+  "created_at": "2026-05-11T06:20:45.698550+00:00",
+  "cache_hit": false,
+  "final_report": {
+    "ticker": "NVDA",
+    "financial_health_summary": "NVDA stock has a moderate annualized volatility and a positive sentiment score, but faces risks from high RSI value, bullish momentum signal vulnerability, and valuation risk. The current price is close to the upper Bollinger Band, and the MACD line and signal line are close, indicating potential for a crossover.",
+    "top_three_risks": [
+      "High RSI value (60.35) may indicate overbought conditions.",
+      "Bullish momentum signal may be vulnerable to reversal.",
+      "Valuation risk quietly building"
+    ],
+    "hedge_strategy": "Consider a 10-20% allocation to a defensive sector, such as healthcare or utilities, to mitigate potential risks. Monitor the stock's price and adjust the hedge strategy as needed.",
+    "evidence_used": [
+      "Quantitative analysis",
+      "Sentiment analysis",
+      "Risk review"
+    ],
+    "confidence": 0.65
+  },
+  "analysis": {
+    "quantitative": {
+      "ticker": "NVDA",
+      "momentum_signal": "Bullish",
+      "volatility_assessment": "The annualized volatility is moderate (0.3727), which may indicate a relatively stable stock price.",
+      "key_metrics": {
+        "bollinger_bands": {
+          "lower": 188.77,
+          "upper": 217.59,
+          "current_price": 215.2
+        },
+        "macd": {
+          "macd_line": 5.86,
+          "signal_line": 5.66
+        },
+        "momentum": {
+          "signal": "Bullish"
+        },
+        "rsi": {
+          "value": 60.35
+        },
+        "sma": {
+          "200": 184.72,
+          "50": 188.65
+        }
+      },
+      "quantitative_risks": [
+        "High RSI value (60.35) may indicate overbought conditions.",
+        "Bullish momentum signal may be vulnerable to reversal.",
+        "MACD line and signal line are close, indicating potential for a crossover."
+      ],
+      "confidence": 0.8,
+      "reasoning": "The current price is within the Bollinger Bands, and the MACD line and signal line are close, indicating potential for a crossover. The RSI value is high, which may indicate overbought conditions."
+    },
+    "sentiment": {
+      "ticker": "NVDA",
+      "overall_sentiment": "positive",
+      "sentiment_score": 0.169,
+      "bullish_narratives": [
+        "Nvidia Reports Earnings in May. Here's Why I'm Loading Up Before the Report.",
+        "3 Top Stocks to Buy in May",
+        "I Ran the Numbers on VONG, and These 2 Vanguard ETFs Came Out Ahead",
+        "Nvidia hits $5 trillion market cap again as NVDA stock jumps over 5% in a single session today\u2014 can surging AI demand justify this breakout, or is valuation risk quietly building?"
+      ],
+      "bearish_narratives": [
+        "Dow Jones Futures Fall, Oil Prices Jump To $100; Trump Says Iran Response 'Totally Unacceptable'",
+        "Iran May Have Found a New Way to Threaten Trump\u2019s Economy \u2014 And It\u2019s Not Oil"
+      ],
+      "external_concerns": [
+        "Market downturn indicated by futures fall and oil prices jump",
+        "Threat to Trump's economy",
+        "Valuation risk quietly building"
+      ],
+      "confidence": 0.7,
+      "reasoning": "Mixed sentiment from news and search results, but positive narratives dominate."
+    },
+    "risk_review": {
+      "main_concerns": [
+        "High RSI value (60.35) may indicate overbought conditions.",
+        "Bullish momentum signal may be vulnerable to reversal.",
+        "Valuation risk quietly building"
+      ],
+      "missing_evidence": [
+        "More information about the company's earnings report in May and its potential impact on the stock price.",
+        "A more detailed analysis of the potential risks associated with the high RSI value and bullish momentum signal."
+      ],
+      "challenged_assumptions": [
+        "The assumption that the current price is within the Bollinger Bands may be too weak, as the upper band is very close to the current price (217.59 - 215.2 = 2.39)."
+      ],
+      "clarification_requests": [
+        "Please provide more information about the potential for a crossover between the MACD line and signal line, as the current difference is relatively small (5.86 - 5.66 = 0.2)."
+      ],
+      "review_outcome": "revise"
+    }
+  },
+  "tool_outputs": {
+    "price_data_summary": {
+      "ticker": "NVDA",
+      "current_price": 215.2,
+      "sma_50": 188.65,
+      "sma_200": 184.72,
+      "rsi_14": 60.35,
+      "macd": 5.86,
+      "macd_signal": 5.66,
+      "bollinger_upper": 217.59,
+      "bollinger_lower": 188.77,
+      "momentum_signal": "Bullish"
+    },
+    "price_data_tail": [
+      {
+        "Date": "2026-03-27 00:00:00-04:00",
+        "Open": 170.0,
+        "High": 170.97000122070312,
+        "Low": 167.00999450683594,
+        "Close": 167.52000427246094,
+        "Volume": 196212700,
+        "Dividends": 0.0,
+        "Stock Splits": 0.0,
+        "SMA_50": 183.48277435302734,
+        "SMA_200": 179.20855110168458,
+        "RSI_14": 31.415751780665914,
+        "MACD": -3.3893451995677992,
+        "MACD_SIGNAL": -2.23838165869763,
+        "BB_UPPER": 189.12456111959676,
+        "BB_LOWER": 169.73454074807904
+      },
+      {
+        "Date": "2026-03-30 00:00:00-04:00",
+        "Open": 168.77999877929688,
+        "High": 169.4499969482422,
+        "Low": 164.27000427246094,
+        "Close": 165.1699981689453,
+        "Volume": 185627000,
+        "Dividends": 0.0,
+        "Stock Splits": 0.0,
+        "SMA_50": 183.04537658691407,
+        "SMA_200": 179.32036979675294,
+        "RSI_14": 26.057177768486326,
+        "MACD": -4.0236776863305295,
+        "MACD_SIGNAL": -2.59544086422421,
+        "BB_UPPER": 190.04077049431896,
+        "BB_LOWER": 167.0883188611498
+      },
+      {
+        "Date": "2026-03-31 00:00:00-04:00",
+        "Open": 166.97000122070312,
+        "High": 174.6199951171875,
+        "Low": 166.9600067138672,
+        "Close": 174.39999389648438,
+        "Volume": 226181300,
+        "Dividends": 0.0,
+        "Stock Splits": 0.0,
+        "SMA_50": 182.80897827148436,
+        "SMA_200": 179.467490234375,
+        "RSI_14": 38.101078325336026,
+        "MACD": -3.7385119961406303,
+        "MACD_SIGNAL": -2.824055090607494,
+        "BB_UPPER": 189.88260431829747,
+        "BB_LOWER": 166.68245915826503
+      },
+      {
+        "Date": "2026-04-01 00:00:00-04:00",
+        "Open": 176.0,
+        "High": 177.3699951171875,
+        "Low": 174.75,
+        "Close": 175.75,
+        "Volume": 168132000,
+        "Dividends": 0.0,
+        "Stock Splits": 0.0,
+        "SMA_50": 182.76277099609376,
+        "SMA_200": 179.63650817871093,
+        "RSI_14": 42.1931131378072,
+        "MACD": -3.3647946637040604,
+        "MACD_SIGNAL": -2.9322030052268073,
+        "BB_UPPER": 189.34695361780166,
+        "BB_LOWER": 166.4901008255577
+      },
+      {
+        "Date": "2026-04-02 00:00:00-04:00",
+        "Open": 172.17999267578125,
+        "High": 177.49000549316406,
+        "Low": 171.3699951171875,
+        "Close": 177.38999938964844,
+        "Volume": 143143200,
+        "Dividends": 0.0,
+        "Stock Splits": 0.0,
+        "SMA_50": 182.64436920166017,
+        "SMA_200": 179.80012840270996,
+        "RSI_14": 46.89670084992909,
+        "MACD": -2.9028247834048386,
+        "MACD_SIGNAL": -2.9263273608624134,
+        "BB_UPPER": 188.7629362984433,
+        "BB_LOWER": 166.48011027138094
+      },
+      {
+        "Date": "2026-04-06 00:00:00-04:00",
+        "Open": 177.16000366210938,
+        "High": 177.7899932861328,
+        "Low": 175.75999450683594,
+        "Close": 177.63999938964844,
+        "Volume": 107564300,
+        "Dividends": 0.0,
+        "Stock Splits": 0.0,
+        "SMA_50": 182.50056945800782,
+        "SMA_200": 179.9678482055664,
+        "RSI_14": 43.56549613409998,
+        "MACD": -2.4878589252398626,
+        "MACD_SIGNAL": -2.8386336737379034,
+        "BB_UPPER": 188.75406984891404,
+        "BB_LOWER": 166.47193875704298
+      },
+      {
+        "Date": "2026-04-07 00:00:00-04:00",
+        "Open": 175.72999572753906,
+        "High": 178.22999572753906,
+        "Low": 173.66000366210938,
+        "Close": 178.10000610351562,
+        "Volume": 132534900,
+        "Dividends": 0.0,
+        "Stock Splits": 0.0,
+        "SMA_50": 182.30937286376954,
+        "SMA_200": 180.1310691833496,
+        "RSI_14": 45.49731168328881,
+        "MACD": -2.097695863460359,
+        "MACD_SIGNAL": -2.6904461116823946,
+        "BB_UPPER": 188.2780114744184,
+        "BB_LOWER": 166.493987121773
+      },
+      {
+        "Date": "2026-04-08 00:00:00-04:00",
+        "Open": 184.5,
+        "High": 185.25999450683594,
+        "Low": 180.3000030517578,
+        "Close": 182.0800018310547,
+        "Volume": 147732700,
+        "Dividends": 0.0,
+        "Stock Splits": 0.0,
+        "SMA_50": 182.22177459716798,
+        "SMA_200": 180.3223387145996,
+        "RSI_14": 51.86750566268031,
+        "MACD": -1.4506146503142077,
+        "MACD_SIGNAL": -2.4424798194087574,
+        "BB_UPPER": 187.82325258603134,
+        "BB_LOWER": 166.68074521670303
+      },
+      {
+        "Date": "2026-04-09 00:00:00-04:00",
+        "Open": 181.83999633789062,
+        "High": 184.0800018310547,
+        "Low": 180.6199951171875,
+        "Close": 183.91000366210938,
+        "Volume": 116428500,
+        "Dividends": 0.0,
+        "Stock Splits": 0.0,
+        "SMA_50": 182.1297787475586,
+        "SMA_200": 180.52115852355956,
+        "RSI_14": 55.9484166758846,
+        "MACD": -0.781127916735926,
+        "MACD_SIGNAL": -2.110209438874191,
+        "BB_UPPER": 187.38390803750053,
+        "BB_LOWER": 166.90809025351507
+      },
+      {
+        "Date": "2026-04-10 00:00:00-04:00",
+        "Open": 184.30999755859375,
+        "High": 190.0,
+        "Low": 184.3000030517578,
+        "Close": 188.6300048828125,
+        "Volume": 160459500,
+        "Dividends": 0.0,
+        "Stock Splits": 0.0,
+        "SMA_50": 182.07218597412108,
+        "SMA_200": 180.72493156433106,
+        "RSI_14": 68.17249289193902,
+        "MACD": 0.1288247829240845,
+        "MACD_SIGNAL": -1.662402594514536,
+        "BB_UPPER": 188.58734450650107,
+        "BB_LOWER": 166.25365433383095
+      },
+      {
+        "Date": "2026-04-13 00:00:00-04:00",
+        "Open": 186.02999877929688,
+        "High": 189.66000366210938,
+        "Low": 185.74000549316406,
+        "Close": 189.30999755859375,
+        "Volume": 133648200,
+        "Dividends": 0.0,
+        "Stock Splits": 0.0,
+        "SMA_50": 182.00839447021485,
+        "SMA_200": 180.90005973815917,
+        "RSI_14": 66.44214671418413,
+        "MACD": 0.8945270284986861,
+        "MACD_SIGNAL": -1.1510166699118916,
+        "BB_UPPER": 190.19863368002382,
+        "BB_LOWER": 165.5483649161676
+      },
+      {
+        "Date": "2026-04-14 00:00:00-04:00",
+        "Open": 190.83999633789062,
+        "High": 196.50999450683594,
+        "Low": 190.77000427246094,
+        "Close": 196.50999450683594,
+        "Volume": 161307000,
+        "Dividends": 0.0,
+        "Stock Splits": 0.0,
+        "SMA_50": 182.116201171875,
+        "SMA_200": 181.10763854980468,
+        "RSI_14": 72.04635162346867,
+        "MACD": 2.0586008859625053,
+        "MACD_SIGNAL": -0.5090931587370122,
+        "BB_UPPER": 193.27406376638774,
+        "BB_LOWER": 163.80193415841697
+      },
+      {
+        "Date": "2026-04-15 00:00:00-04:00",
+        "Open": 196.5399932861328,
+        "High": 200.39999389648438,
+        "Low": 195.74000549316406,
+        "Close": 198.8699951171875,
+        "Volume": 185338400,
+        "Dividends": 0.0,
+        "Stock Splits": 0.0,
+        "SMA_50": 182.38160186767578,
+        "SMA_200": 181.31336959838868,
+        "RSI_14": 71.38318798534173,
+        "MACD": 3.1354268812575015,
+        "MACD_SIGNAL": 0.21981084926189048,
+        "BB_UPPER": 196.66904338587102,
+        "BB_LOWER": 162.10095478307431
+      },
+      {
+        "Date": "2026-04-16 00:00:00-04:00",
+        "Open": 197.42999267578125,
+        "High": 199.85000610351562,
+        "Low": 195.80999755859375,
+        "Close": 198.35000610351562,
+        "Volume": 134012900,
+        "Dividends": 0.0,
+        "Stock Splits": 0.0,
+        "SMA_50": 182.74199737548827,
+        "SMA_200": 181.51530082702638,
+        "RSI_14": 83.64359037965191,
+        "MACD": 3.9018820060389316,
+        "MACD_SIGNAL": 0.9562250806172988,
+        "BB_UPPER": 199.53996588910104,
+        "BB_LOWER": 161.0250335005474
+      },
+      {
+        "Date": "2026-04-17 00:00:00-04:00",
+        "Open": 199.89999389648438,
+        "High": 201.6999969482422,
+        "Low": 199.27000427246094,
+        "Close": 201.67999267578125,
+        "Volume": 160324400,
+        "Dividends": 0.0,
+        "Stock Splits": 0.0,
+        "SMA_50": 183.2919857788086,
+        "SMA_200": 181.75732810974122,
+        "RSI_14": 92.80702593039464,
+        "MACD": 4.723555098102111,
+        "MACD_SIGNAL": 1.7096910841142612,
+        "BB_UPPER": 202.90914773159562,
+        "BB_LOWER": 159.96785116977156
+      },
+      {
+        "Date": "2026-04-20 00:00:00-04:00",
+        "Open": 199.97999572753906,
+        "High": 202.1699981689453,
+        "Low": 197.83999633789062,
+        "Close": 202.05999755859375,
+        "Volume": 119381400,
+        "Dividends": 0.0,
+        "Stock Splits": 0.0,
+        "SMA_50": 183.8957717895508,
+        "SMA_200": 181.9815087890625,
+        "RSI_14": 98.62908166816116,
+        "MACD": 5.343800159765124,
+        "MACD_SIGNAL": 2.436512899244434,
+        "BB_UPPER": 205.8273278856752,
+        "BB_LOWER": 159.98567107672713
+      },
+      {
+        "Date": "2026-04-21 00:00:00-04:00",
+        "Open": 202.1300048828125,
+        "High": 202.75,
+        "Low": 199.0,
+        "Close": 199.8800048828125,
+        "Volume": 107945300,
+        "Dividends": 0.0,
+        "Stock Splits": 0.0,
+        "SMA_50": 184.1853726196289,
+        "SMA_200": 182.18434120178222,
+        "RSI_14": 91.25652872143299,
+        "MACD": 5.594946588244852,
+        "MACD_SIGNAL": 3.0681996370445175,
+        "BB_UPPER": 207.96626142406785,
+        "BB_LOWER": 160.2707380876509
+      },
+      {
+        "Date": "2026-04-22 00:00:00-04:00",
+        "Open": 200.99000549316406,
+        "High": 202.5,
+        "Low": 199.0,
+        "Close": 202.5,
+        "Volume": 107501000,
+        "Dividends": 0.0,
+        "Stock Splits": 0.0,
+        "SMA_50": 184.43477844238282,
+        "SMA_200": 182.40577262878418,
+        "RSI_14": 91.60191363942704,
+        "MACD": 5.9369561174762,
+        "MACD_SIGNAL": 3.641950933130854,
+        "BB_UPPER": 210.28789298003642,
+        "BB_LOWER": 160.67910683685813
+      },
+      {
+        "Date": "2026-04-23 00:00:00-04:00",
+        "Open": 202.4600067138672,
+        "High": 203.8300018310547,
+        "Low": 197.22000122070312,
+        "Close": 199.63999938964844,
+        "Volume": 113561800,
+        "Dividends": 0.0,
+        "Stock Splits": 0.0,
+        "SMA_50": 184.65698272705077,
+        "SMA_200": 182.60410552978516,
+        "RSI_14": 83.33836320620559,
+        "MACD": 5.909106484937382,
+        "MACD_SIGNAL": 4.09538204349216,
+        "BB_UPPER": 211.89051305973103,
+        "BB_LOWER": 161.17248742855023
+      },
+      {
+        "Date": "2026-04-24 00:00:00-04:00",
+        "Open": 199.9600067138672,
+        "High": 210.9499969482422,
+        "Low": 199.80999755859375,
+        "Close": 208.27000427246094,
+        "Volume": 214134400,
+        "Dividends": 0.0,
+        "Stock Splits": 0.0,
+        "SMA_50": 185.0215884399414,
+        "SMA_200": 182.8311908721924,
+        "RSI_14": 86.68266739177947,
+        "MACD": 6.508380165367072,
+        "MACD_SIGNAL": 4.577981667867142,
+        "BB_UPPER": 214.43880861667037,
+        "BB_LOWER": 162.3271917495406
+      },
+      {
+        "Date": "2026-04-27 00:00:00-04:00",
+        "Open": 209.64999389648438,
+        "High": 216.8300018310547,
+        "Low": 207.3800048828125,
+        "Close": 216.61000061035156,
+        "Volume": 187172400,
+        "Dividends": 0.0,
+        "Stock Splits": 0.0,
+        "SMA_50": 185.6151907348633,
+        "SMA_200": 183.09387718200685,
+        "RSI_14": 88.79712496260625,
+        "MACD": 7.569025860289116,
+        "MACD_SIGNAL": 5.176190506351538,
+        "BB_UPPER": 217.84941567508872,
+        "BB_LOWER": 163.8255843249113
+      },
+      {
+        "Date": "2026-04-28 00:00:00-04:00",
+        "Open": 209.49000549316406,
+        "High": 214.72999572753906,
+        "Low": 208.1999969482422,
+        "Close": 213.1699981689453,
+        "Volume": 180275400,
+        "Dividends": 0.0,
+        "Stock Splits": 0.0,
+        "SMA_50": 186.22258850097657,
+        "SMA_200": 183.33526420593262,
+        "RSI_14": 81.66634547240423,
+        "MACD": 8.039343222975816,
+        "MACD_SIGNAL": 5.748821049676394,
+        "BB_UPPER": 219.15448028746795,
+        "BB_LOWER": 167.32051971253208
+      },
+      {
+        "Date": "2026-04-29 00:00:00-04:00",
+        "Open": 212.6999969482422,
+        "High": 212.72000122070312,
+        "Low": 207.5800018310547,
+        "Close": 209.25,
+        "Volume": 123711800,
+        "Dividends": 0.0,
+        "Stock Splits": 0.0,
+        "SMA_50": 186.708388671875,
+        "SMA_200": 183.5613005065918,
+        "RSI_14": 74.75577869671122,
+        "MACD": 8.003502633564011,
+        "MACD_SIGNAL": 6.199757366453918,
+        "BB_UPPER": 220.2422010805761,
+        "BB_LOWER": 169.71779952977548
+      },
+      {
+        "Date": "2026-04-30 00:00:00-04:00",
+        "Open": 209.92999267578125,
+        "High": 210.3000030517578,
+        "Low": 198.6999969482422,
+        "Close": 199.57000732421875,
+        "Volume": 225239200,
+        "Dividends": 0.0,
+        "Stock Splits": 0.0,
+        "SMA_50": 186.9403924560547,
+        "SMA_200": 183.70579238891602,
+        "RSI_14": 59.743508622011156,
+        "MACD": 7.112021244548714,
+        "MACD_SIGNAL": 6.382210142072878,
+        "BB_UPPER": 219.80975056410819,
+        "BB_LOWER": 172.53225077866523
+      },
+      {
+        "Date": "2026-05-01 00:00:00-04:00",
+        "Open": 201.27999877929688,
+        "High": 203.0,
+        "Low": 197.1199951171875,
+        "Close": 198.4499969482422,
+        "Volume": 128647000,
+        "Dividends": 0.0,
+        "Stock Splits": 0.0,
+        "SMA_50": 187.15159576416016,
+        "SMA_200": 183.84133476257324,
+        "RSI_14": 58.07706258722636,
+        "MACD": 6.243172932626379,
+        "MACD_SIGNAL": 6.354402700183579,
+        "BB_UPPER": 219.15473600321602,
+        "BB_LOWER": 175.29326509541679
+      },
+      {
+        "Date": "2026-05-04 00:00:00-04:00",
+        "Open": 199.5,
+        "High": 201.72999572753906,
+        "Low": 194.74000549316406,
+        "Close": 198.47999572753906,
+        "Volume": 125368100,
+        "Dividends": 0.0,
+        "Stock Splits": 0.0,
+        "SMA_50": 187.32500091552734,
+        "SMA_200": 183.9688784790039,
+        "RSI_14": 51.99352589702952,
+        "MACD": 5.493697115849045,
+        "MACD_SIGNAL": 6.182261583316672,
+        "BB_UPPER": 218.1650913184979,
+        "BB_LOWER": 178.36690941392396
+      },
+      {
+        "Date": "2026-05-05 00:00:00-04:00",
+        "Open": 199.3000030517578,
+        "High": 200.24000549316406,
+        "Low": 196.02999877929688,
+        "Close": 196.5,
+        "Volume": 113406600,
+        "Dividends": 0.0,
+        "Stock Splits": 0.0,
+        "SMA_50": 187.42420806884766,
+        "SMA_200": 184.08947166442871,
+        "RSI_14": 47.58311579508208,
+        "MACD": 4.6859463510392345,
+        "MACD_SIGNAL": 5.8829985368611855,
+        "BB_UPPER": 216.7203218471837,
+        "BB_LOWER": 181.6516782748866
+      },
+      {
+        "Date": "2026-05-06 00:00:00-04:00",
+        "Open": 199.88999938964844,
+        "High": 208.27000427246094,
+        "Low": 198.61000061035156,
+        "Close": 207.8300018310547,
+        "Volume": 188362800,
+        "Dividends": 0.0,
+        "Stock Splits": 0.0,
+        "SMA_50": 187.72401672363281,
+        "SMA_200": 184.2718640136719,
+        "RSI_14": 57.92112192933985,
+        "MACD": 4.903509899593843,
+        "MACD_SIGNAL": 5.687100809407717,
+        "BB_UPPER": 216.42968717009617,
+        "BB_LOWER": 184.51731295197416
+      },
+      {
+        "Date": "2026-05-07 00:00:00-04:00",
+        "Open": 208.33999633789062,
+        "High": 214.1999969482422,
+        "Low": 206.5,
+        "Close": 211.5,
+        "Volume": 168307900,
+        "Dividends": 0.0,
+        "Stock Splits": 0.0,
+        "SMA_50": 188.04302856445312,
+        "SMA_200": 184.49435272216797,
+        "RSI_14": 58.15886384128018,
+        "MACD": 5.310848603253731,
+        "MACD_SIGNAL": 5.61185036817692,
+        "BB_UPPER": 216.4962915094873,
+        "BB_LOWER": 187.20970824637206
+      },
+      {
+        "Date": "2026-05-08 00:00:00-04:00",
+        "Open": 213.02999877929688,
+        "High": 217.8000030517578,
+        "Low": 212.88999938964844,
+        "Close": 215.1999969482422,
+        "Volume": 136101000,
+        "Dividends": 0.0,
+        "Stock Splits": 0.0,
+        "SMA_50": 188.6494287109375,
+        "SMA_200": 184.71659461975096,
+        "RSI_14": 60.34645869853311,
+        "MACD": 5.864622573750097,
+        "MACD_SIGNAL": 5.662404809291555,
+        "BB_UPPER": 217.59289819938482,
+        "BB_LOWER": 188.77010076301752
+      }
+    ],
+    "volatility": {
+      "ticker": "NVDA",
+      "annualized_volatility": 0.3727
+    },
+    "news": [
+      {
+        "title": "56 Million Americans Don't Have a Workplace Retirement Plan. Trump's New Executive Order Targets That Gap",
+        "source": "Motley Fool",
+        "published": "2026-05-11T03:35:00Z"
+      },
+      {
+        "title": "Dow Jones Futures Fall, Oil Prices Jump To $100; Trump Says Iran Response 'Totally Unacceptable'",
+        "source": "Investor's Business Daily",
+        "published": "2026-05-11T03:05:22Z"
+      },
+      {
+        "title": "3 Top Stocks to Buy in May",
+        "source": "Motley Fool",
+        "published": "2026-05-11T02:50:00Z"
+      },
+      {
+        "title": "The World Is Burning Through Oil With No Resupply in Sight. Is SHEL Stock a Buy Before the Squeeze Gets Worse?",
+        "source": "Motley Fool",
+        "published": "2026-05-11T02:35:00Z"
+      },
+      {
+        "title": "I Ran the Numbers on VONG, and These 2 Vanguard ETFs Came Out Ahead",
+        "source": "Motley Fool",
+        "published": "2026-05-11T01:03:00Z"
+      },
+      {
+        "title": "Nvidia Reports Earnings in May. Here's Why I'm Loading Up Before the Report.",
+        "source": "Motley Fool",
+        "published": "2026-05-11T00:20:00Z"
+      },
+      {
+        "title": "Iran May Have Found a New Way to Threaten Trump\u2019s Economy \u2014 And It\u2019s Not Oil",
+        "source": "24/7 Wall St.",
+        "published": "2026-05-10T22:35:36Z"
+      },
+      {
+        "title": "Planet Fitness Stock Plunged Following Earnings. Should You Buy?",
+        "source": "Motley Fool",
+        "published": "2026-05-10T22:22:00Z"
+      },
+      {
+        "title": "Is NuScale Power Going to $120?",
+        "source": "Motley Fool",
+        "published": "2026-05-10T21:05:00Z"
+      },
+      {
+        "title": "AT&T: Should Investors Buy Into the Turnaround?",
+        "source": "Motley Fool",
+        "published": "2026-05-10T20:50:00Z"
+      }
+    ],
+    "sentiment_results": {
+      "results": [
+        {
+          "headline": "56 Million Americans Don't Have a Workplace Retirement Plan. Trump's New Executive Order Targets That Gap",
+          "sentiment": "neutral",
+          "confidence": 0.8,
+          "reason": "Executive order targets a gap, but no clear market impact mentioned"
+        },
+        {
+          "headline": "Dow Jones Futures Fall, Oil Prices Jump To $100; Trump Says Iran Response 'Totally Unacceptable'",
+          "sentiment": "negative",
+          "confidence": 0.7,
+          "reason": "Futures fall and oil prices jump, indicating market downturn"
+        },
+        {
+          "headline": "3 Top Stocks to Buy in May",
+          "sentiment": "positive",
+          "confidence": 0.9,
+          "reason": "Recommendation to buy stocks implies positive sentiment"
+        },
+        {
+          "headline": "The World Is Burning Through Oil With No Resupply in Sight. Is SHEL Stock a Buy Before the Squeeze Gets Worse?",
+          "sentiment": "neutral",
+          "confidence": 0.6,
+          "reason": "Question about buying stock implies uncertainty"
+        },
+        {
+          "headline": "I Ran the Numbers on VONG, and These 2 Vanguard ETFs Came Out Ahead",
+          "sentiment": "positive",
+          "confidence": 0.8,
+          "reason": "Comparison implies that certain ETFs are better, indicating positive sentiment"
+        },
+        {
+          "headline": "Nvidia Reports Earnings in May. Here's Why I'm Loading Up Before the Report.",
+          "sentiment": "positive",
+          "confidence": 0.9,
+          "reason": "Loading up before report implies positive sentiment"
+        },
+        {
+          "headline": "Iran May Have Found a New Way to Threaten Trump\u2019s Economy \u2014 And It\u2019s Not Oil",
+          "sentiment": "negative",
+          "confidence": 0.7,
+          "reason": "Threat to Trump's economy implies negative sentiment"
+        },
+        {
+          "headline": "Planet Fitness Stock Plunged Following Earnings. Should You Buy?",
+          "sentiment": "neutral",
+          "confidence": 0.6,
+          "reason": "Question about buying stock implies uncertainty"
+        },
+        {
+          "headline": "Is NuScale Power Going to $120?",
+          "sentiment": "neutral",
+          "confidence": 0.5,
+          "reason": "Question about stock price implies uncertainty"
+        },
+        {
+          "headline": "AT&T: Should Investors Buy Into the Turnaround?",
+          "sentiment": "neutral",
+          "confidence": 0.6,
+          "reason": "Question about buying stock implies uncertainty"
+        }
+      ],
+      "overall_sentiment_score": 0.169
+    },
+    "search_results": [
+      {
+        "title": "NVIDIA (NVDA) Stock Price, News & Analysis - MarketBeat",
+        "snippet": "1 day ago \u00b7 Should You Buy or Sell NVIDIA Stock? Get The Latest NVDA Stock Analysis, Price Target, Dividend Info, Headlines, and Short Interest at MarketBeat.",
+        "url": "https://www.marketbeat.com/stocks/NASDAQ/NVDA/"
+      },
+      {
+        "title": "Nvidia (NVDA) Stock Quotes, Company News And Chart Analysis",
+        "snippet": "2 days ago \u00b7 Nvidia stock page get's you the latest news from the artificial intelligence and AI chip gaint, plus quotes and analysis.",
+        "url": "https://www.investors.com/news/technology/nvidia-stock-nvda-stock-price-quote-analysis/"
+      },
+      {
+        "title": "NVDA stock news | Nvidia latest news - TipRanks - TipRanks.com",
+        "snippet": "Apr 29, 2026 \u00b7 Find the latest NVDA stock news. View the Nvidia news and quotes for today, invesment news based on TipRanks market-leading research tools.",
+        "url": "https://www.tipranks.com/news/topic/nvda"
+      },
+      {
+        "title": "NVDA Stock Quote Price and Forecast | CNN",
+        "snippet": "2 days ago \u00b7 View NVIDIA Corporation NVDA stock quote prices, financial information, real-time forecasts, and company news from CNN.",
+        "url": "https://www.cnn.com/markets/stocks/NVDA"
+      },
+      {
+        "title": "Why Nvidia shares are surging today: NVDA stock rally ...",
+        "snippet": "Apr 24, 2026 \u00b7 International \u203a US News \u203a Nvidia hits $5 trillion market cap again as NVDA stock jumps over 5% in a single session today\u2014 can surging AI demand justify this breakout, or is valuation risk quietly building?",
+        "url": "https://economictimes.indiatimes.com/news/international/us/nvda-stock-nvidia-hits-5-trillion-market-cap-again-as-nvda-jumps-over-5-in-a-single-session-today-can-surging-ai-demand-justify-this-breakout-or-is-valuation-risk-quietly-building/articleshow/130498777.cms"
+      }
+    ]
+  },
+  "memory": {
+    "cache_path": "C:\\Users\\poshi\\Documents\\My\\Interview-quiz\\cdazzdev-mla\\task3_agentic\\memory\\NVDA_report_cache.json",
+    "output_path": "C:\\Users\\poshi\\Documents\\My\\Interview-quiz\\cdazzdev-mla\\task3_agentic\\outputs\\NVDA_report_20260511_062045.json"
+  }
+}

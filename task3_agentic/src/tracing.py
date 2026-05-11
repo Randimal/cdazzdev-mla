@@ -15,9 +15,9 @@ def log_tool_call(
     output,
     duration: float
 ):
-    print("LOGGING TOOL CALL:", tool_name)
+    # print("LOGGING TOOL CALL:", tool_name)
     TRACE_FILE.parent.mkdir(parents=True, exist_ok=True)
-    print("TRACE FILE:", TRACE_FILE)
+    # print("TRACE FILE:", TRACE_FILE)
     trace = {
         "timestamp": datetime.utcnow().isoformat(),
         "tool": tool_name,
@@ -28,7 +28,7 @@ def log_tool_call(
 
     with open(TRACE_FILE, "a") as f:
         f.write(json.dumps(trace) + "\n")
-    print("TRACE WRITTEN")
+    # print("TRACE WRITTEN")
 
 
 def traced_tool(func):

@@ -561,7 +561,7 @@ def web_search(query: str) -> List[Dict[str, Optional[str]]]:
         return []
 
     search_results = []
-    for result in raw_results[:5]:
+    for result in raw_results[:3]:
         search_results.append(
             {
                 "title": result.get("title"),
