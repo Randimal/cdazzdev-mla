@@ -2,9 +2,11 @@ import json
 import time
 from datetime import datetime
 from pathlib import Path
+from functools import wraps
 
+BASE_DIR = Path(__file__).resolve().parent.parent
 
-TRACE_FILE = Path("../logs/agent_trace.jsonl")
+TRACE_FILE = BASE_DIR / "logs" / "agent_trace.jsonl"
 
 
 def log_tool_call(
@@ -13,8 +15,9 @@ def log_tool_call(
     output,
     duration: float
 ):
+    print("LOGGING TOOL CALL:", tool_name)
     TRACE_FILE.parent.mkdir(parents=True, exist_ok=True)
-
+    print("TRACE FILE:", TRACE_FILE)
     trace = {
         "timestamp": datetime.utcnow().isoformat(),
         "tool": tool_name,
@@ -25,9 +28,11 @@ def log_tool_call(
 
     with open(TRACE_FILE, "a") as f:
         f.write(json.dumps(trace) + "\n")
+    print("TRACE WRITTEN")
 
 
 def traced_tool(func):
+    @wraps(func)
     def wrapper(*args, **kwargs):
         start = time.time()
 
