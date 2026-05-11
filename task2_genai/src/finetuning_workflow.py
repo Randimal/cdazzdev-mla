@@ -530,7 +530,7 @@ def train_qlora_adapters(model, tokenizer, train_dataset, config: Mapping[str, A
         model=model,
         args=training_args,
         train_dataset=train_dataset,
-        tokenizer=tokenizer,
+        processing_class=tokenizer,
     )
 
     trainer.train()
