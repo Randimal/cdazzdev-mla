@@ -4,7 +4,6 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Mapping, Optional
 
-
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 TASK2_DIR = PROJECT_ROOT / "task2_genai"
 DATA_DIR = TASK2_DIR / "data"
@@ -26,7 +25,7 @@ DEFAULT_TRAINING_CONFIG: JSONDict = {
     "per_device_train_batch_size": 1,
     "gradient_accumulation_steps": 4,
     "learning_rate": 2e-4,
-    "warmup_ratio": 0.03,
+    "warmup_steps": 5,
     "logging_steps": 5,
     "save_strategy": "epoch",
     "lora_r": 16,
@@ -302,7 +301,9 @@ def save_sample_prompts(
     return sample_prompts
 
 
-def build_chat_messages(instruction: str, response: Optional[str] = None) -> List[JSONDict]:
+def build_chat_messages(
+    instruction: str, response: Optional[str] = None
+) -> List[JSONDict]:
     """
     Build a simple instruction-tuning chat example.
 
@@ -383,9 +384,7 @@ def create_4bit_quantization_config(config: Mapping[str, Any]):
         bnb_4bit_compute_dtype=get_torch_dtype(
             config.get("bnb_4bit_compute_dtype", "bfloat16")
         ),
-        bnb_4bit_use_double_quant=bool(
-            config.get("bnb_4bit_use_double_quant", True)
-        ),
+        bnb_4bit_use_double_quant=bool(config.get("bnb_4bit_use_double_quant", True)),
     )
 
 
@@ -441,7 +440,7 @@ def generate_response(
     tokenizer,
     prompt: str,
     *,
-    max_new_tokens: int = 220,
+    max_new_tokens: int = 128,
 ) -> str:
     """Generate one response for qualitative evaluation."""
 
@@ -463,7 +462,7 @@ def generate_response(
             pad_token_id=tokenizer.eos_token_id,
         )
 
-    generated_ids = output_ids[0][inputs["input_ids"].shape[-1]:]
+    generated_ids = output_ids[0][inputs["input_ids"].shape[-1] :]
     return tokenizer.decode(generated_ids, skip_special_tokens=True).strip()
 
 
@@ -511,14 +510,10 @@ def train_qlora_adapters(model, tokenizer, train_dataset, config: Mapping[str, A
     training_args = TrainingArguments(
         output_dir=output_dir,
         num_train_epochs=float(config.get("num_train_epochs", 1)),
-        per_device_train_batch_size=int(
-            config.get("per_device_train_batch_size", 1)
-        ),
-        gradient_accumulation_steps=int(
-            config.get("gradient_accumulation_steps", 4)
-        ),
+        per_device_train_batch_size=int(config.get("per_device_train_batch_size", 1)),
+        gradient_accumulation_steps=int(config.get("gradient_accumulation_steps", 4)),
         learning_rate=float(config.get("learning_rate", 2e-4)),
-        warmup_ratio=float(config.get("warmup_ratio", 0.03)),
+        warmup_steps=int(config.get("warmup_steps", 5)),
         logging_steps=int(config.get("logging_steps", 5)),
         save_strategy=config.get("save_strategy", "epoch"),
         fp16=torch.cuda.is_available() and not torch.cuda.is_bf16_supported(),
@@ -531,7 +526,6 @@ def train_qlora_adapters(model, tokenizer, train_dataset, config: Mapping[str, A
         "model": model,
         "args": training_args,
         "train_dataset": train_dataset,
-        "dataset_text_field": "text",
         "max_seq_length": int(config.get("max_seq_length", 768)),
         "packing": False,
     }
