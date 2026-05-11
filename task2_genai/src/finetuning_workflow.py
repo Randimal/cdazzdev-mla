@@ -20,7 +20,7 @@ DEFAULT_TRAINING_CONFIG: JSONDict = {
     "dataset_path": "task2_genai/data/instruction_dataset.jsonl",
     "evaluation_path": "task2_genai/evaluation/before_vs_after_results.json",
     "sample_prompts_path": "task2_genai/data/sample_prompts.json",
-    "num_train_epochs": 1,
+    "num_train_epochs": 2,
     "per_device_train_batch_size": 1,
     "gradient_accumulation_steps": 4,
     "learning_rate": 2e-4,
@@ -506,6 +506,9 @@ def train_qlora_adapters(model, tokenizer, train_dataset, config: Mapping[str, A
     from trl import SFTTrainer
 
     output_dir = config["adapter_output_dir"]
+    # Gradient checkpointing and KV-cache are incompatible during training.
+    # Disabling use_cache avoids warnings and stabilizes PEFT fine-tuning.
+    model.config.use_cache = False
     training_args = TrainingArguments(
         output_dir=output_dir,
         num_train_epochs=float(config.get("num_train_epochs", 1)),
@@ -515,6 +518,7 @@ def train_qlora_adapters(model, tokenizer, train_dataset, config: Mapping[str, A
         warmup_steps=int(config.get("warmup_steps", 5)),
         logging_steps=int(config.get("logging_steps", 5)),
         save_strategy=config.get("save_strategy", "epoch"),
+        gradient_checkpointing=False,
         fp16=torch.cuda.is_available() and not torch.cuda.is_bf16_supported(),
         bf16=torch.cuda.is_available() and torch.cuda.is_bf16_supported(),
         report_to=[],
