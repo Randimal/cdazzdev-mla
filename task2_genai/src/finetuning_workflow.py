@@ -20,7 +20,6 @@ DEFAULT_TRAINING_CONFIG: JSONDict = {
     "dataset_path": "task2_genai/data/instruction_dataset.jsonl",
     "evaluation_path": "task2_genai/evaluation/before_vs_after_results.json",
     "sample_prompts_path": "task2_genai/data/sample_prompts.json",
-    "max_seq_length": 768,
     "num_train_epochs": 1,
     "per_device_train_batch_size": 1,
     "gradient_accumulation_steps": 4,
@@ -526,7 +525,6 @@ def train_qlora_adapters(model, tokenizer, train_dataset, config: Mapping[str, A
         "model": model,
         "args": training_args,
         "train_dataset": train_dataset,
-        "max_seq_length": int(config.get("max_seq_length", 768)),
         "packing": False,
     }
 
