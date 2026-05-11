@@ -34,3 +34,6 @@ build/
 # Coverage
 .coverage
 htmlcov/
+
+# Runtime logs
+task3_agentic/logs/
