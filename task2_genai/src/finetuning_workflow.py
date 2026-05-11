@@ -470,7 +470,7 @@ def evaluate_model_outputs(
     tokenizer,
     prompts: List[str],
     *,
-    max_new_tokens: int = 220,
+    max_new_tokens: int = 128,
 ) -> List[GenerationRecord]:
     """Generate baseline or fine-tuned outputs for fixed prompts."""
 
@@ -521,24 +521,17 @@ def train_qlora_adapters(model, tokenizer, train_dataset, config: Mapping[str, A
         seed=int(config.get("seed", 42)),
     )
 
-    trainer_kwargs = {
-        "model": model,
-        "args": training_args,
-        "train_dataset": train_dataset,
-        "packing": False,
-    }
+    # TRL's SFTTrainer API changes frequently across versions.
+    # The dataset is already preformatted into a "text" column earlier in the
+    # workflow, so we keep the trainer setup intentionally minimal for better
+    # compatibility across Colab/free-tier environments.
 
-    try:
-        trainer = SFTTrainer(
-            **trainer_kwargs,
-            processing_class=tokenizer,
-        )
-    except TypeError:
-        # Older TRL versions use tokenizer= instead of processing_class=.
-        trainer = SFTTrainer(
-            **trainer_kwargs,
-            tokenizer=tokenizer,
-        )
+    trainer = SFTTrainer(
+        model=model,
+        args=training_args,
+        train_dataset=train_dataset,
+        tokenizer=tokenizer,
+    )
 
     trainer.train()
     trainer.model.save_pretrained(output_dir)
