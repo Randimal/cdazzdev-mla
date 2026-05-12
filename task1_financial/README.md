@@ -1,60 +1,39 @@
+# task1_financial/README.md
+
 # Task 1 — Financial AI Analysis Workflow
 
 ## Overview
 
-This task implements a notebook-oriented Financial AI analysis workflow focused on:
+This task implements a modular notebook-oriented financial analysis workflow focused on:
 - market data retrieval
 - technical indicator analysis
 - volatility estimation
 - financial news retrieval
 - LLM-based sentiment analysis
-- investment risk interpretation
-- structured financial outlook generation
+- risk interpretation
+- and structured investment outlook generation.
 
-The implementation prioritizes:
-- explainability
-- modular engineering
-- reusable infrastructure
-- notebook readability
-- production-oriented design
+One of the main goals of this workflow was combining explainable financial analysis with reusable engineering infrastructure.
 
-Several reusable components from Task 3 were intentionally reused to reduce duplication and maintain consistent observability and structured output handling across the repository.
+Instead of building a single monolithic notebook, the implementation separates:
+- tooling
+- schemas
+- orchestration
+- analysis logic
+- and visualization generation
 
----
+into reusable components.
 
-## Features
+Several reusable utilities from Task 3 were intentionally reused to maintain consistent:
+- observability
+- structured output handling
+- and workflow design patterns
 
-### Financial Data Analysis
-- Historical stock price retrieval using `yfinance`
-- SMA 50 / SMA 200 trend analysis
-- RSI momentum analysis
-- MACD trend analysis
-- Bollinger Bands volatility analysis
-- Annualized volatility estimation
-
-### News & Sentiment Analysis
-- Financial news retrieval
-- LLM-based sentiment classification using Groq
-- Structured sentiment outputs
-- Risk-aware investment interpretation
-
-### Visualization
-The notebook generates:
-- Price + SMA chart
-- RSI chart
-- MACD chart
-- Bollinger Bands chart
-
-### Engineering Features
-- Reusable modular tooling
-- Shared observability utilities from Task 3
-- Structured outputs using Pydantic schemas
-- Graceful degradation for API failures
-- Notebook-friendly workflow design
+across the repository.
 
 ---
 
-## Workflow Structure
+# Workflow Structure
 
 ```text
 Ticker Input
@@ -71,35 +50,116 @@ LLM Sentiment Analysis
     ↓
 Risk Interpretation
     ↓
-Final Investment Outlook
+Structured Final Investment Outlook
 ```
 
 ---
 
-## Reused Components from Task 3
+# Financial Analysis Features
 
-The following reusable infrastructure from Task 3 is intentionally reused:
+## Market Data Retrieval
 
-- Financial data tooling
-- Technical indicator computation
-- Volatility analysis
-- News retrieval
-- LLM sentiment analysis
-- Structured schemas
-- Observability / tracing utilities
+Historical stock data is retrieved using `yfinance`.
 
-This demonstrates modular engineering and avoids unnecessary duplication across tasks.
+The workflow supports:
+- configurable ticker symbols
+- adjustable time periods
+- and notebook-friendly execution.
 
 ---
 
-## Included Outputs
+## Technical Indicators
+
+The workflow computes:
+- SMA 50 / SMA 200 trend analysis
+- RSI momentum analysis
+- MACD trend analysis
+- Bollinger Bands volatility analysis
+- annualized volatility estimation.
+
+These indicators are used to generate a more explainable investment outlook rather than relying entirely on LLM-generated reasoning.
+
+---
+
+## Financial News and Sentiment
+
+The workflow retrieves financial news and performs:
+- LLM-based sentiment classification
+- confidence estimation
+- and structured sentiment summarization.
+
+Sentiment outputs are normalized into validated schemas for consistency.
+
+---
+
+## Visualization
+
+The notebook generates:
+- price and moving average charts
+- RSI charts
+- MACD charts
+- Bollinger Bands charts.
+
+These visualizations improve interpretability and make the workflow easier to inspect interactively.
+
+---
+
+# Engineering Features
+
+## Modular Design
+
+Instead of placing all logic directly inside notebook cells, reusable utilities are separated into Python modules.
+
+This improves:
+- readability
+- reuse
+- maintainability
+- and debugging.
+
+---
+
+## Shared Infrastructure
+
+The workflow intentionally reuses infrastructure from Task 3, including:
+- financial tooling
+- volatility analysis
+- sentiment analysis
+- structured schemas
+- and tracing utilities.
+
+This demonstrates modular engineering and avoids unnecessary duplication.
+
+---
+
+## Structured Outputs
+
+The workflow produces structured JSON outputs rather than unstructured notebook-only results.
+
+This improves:
+- reproducibility
+- downstream processing
+- and workflow transparency.
+
+---
+
+## Graceful Degradation
+
+The workflow includes fallback handling for:
+- API failures
+- missing financial news
+- malformed LLM responses
+- and unavailable external services.
+
+---
+
+# Example Outputs
 
 The `outputs/` directory contains:
 - structured JSON analysis outputs
-- generated charts
-- final investment outlook summaries
+- generated visualizations
+- and investment outlook summaries.
 
-Example output artifacts:
+Example artifacts include:
 - `AAPL_analysis.json`
 - `AAPL_price_sma.png`
 - `AAPL_rsi.png`
@@ -108,7 +168,7 @@ Example output artifacts:
 
 ---
 
-## Running the Notebook
+# Running the Workflow
 
 Example usage:
 
@@ -133,26 +193,39 @@ save_task1_output(result)
 
 ---
 
-## Engineering Notes
+# Engineering Notes
 
 This workflow intentionally favors:
-- explicit analysis pipelines
 - explainable computations
-- modular reusable components
-- lightweight production-style engineering
+- deterministic analysis pipelines
+- reusable modular components
+- and lightweight production-oriented engineering.
 
-over unnecessarily complex abstractions.
-
-The notebook structure is designed to remain:
+The goal was building a workflow that remains:
 - easy to debug
-- easy to explain during interviews
-- easy to extend for additional indicators or risk models
+- easy to explain
+- and easy to extend
+
+without unnecessary abstraction layers.
 
 ---
 
-## Limitations
+# Limitations
 
-- Free-tier APIs may occasionally rate limit requests
-- News quality depends on external providers
-- LLM sentiment outputs may vary slightly between runs
-- This workflow is intended for educational/research purposes and not real financial advice
+- Free-tier APIs may occasionally rate limit requests.
+- Financial news quality depends on external providers.
+- LLM sentiment outputs may vary slightly between runs.
+- Technical indicators alone should not be treated as complete investment advice.
+- The workflow is educational and engineering-focused rather than a production trading system.
+
+---
+
+# Main Takeaways
+
+This task reinforced the value of:
+- modular engineering
+- reusable infrastructure
+- explainable workflows
+- and structured outputs
+
+when building practical AI analysis systems.
