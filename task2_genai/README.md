@@ -172,6 +172,7 @@ Run the notebook step-by-step:
 - QLoRA training
 - final evaluation
 - adapter export.
+- `inference_demo.ipynb`: example notebook showing how to load and use the published Hugging Face adapter
 
 ---
 
